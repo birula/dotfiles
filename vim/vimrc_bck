@@ -1,0 +1,6 @@
+nnoremap <F5> :buffers<CR>:buffer<Space>
+nnoremap <tab> :tabnext<CR>
+
+set tabstop=2
+set shiftwidth=2
+set expandtab
