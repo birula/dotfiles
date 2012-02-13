@@ -1,9 +1,37 @@
-" Example Vim configuration.
-" Copy or symlink to ~/.vimrc or ~/_vimrc.
+set nocompatible                  " Must come first because it changes other options.
 
 set guifont=Ubuntu\ Mono\ Bold\ 12
+filetype off
 
-set nocompatible                  " Must come first because it changes other options.
+" Vundle scripts
+set rtp+=~/.dotfiles/vim/bundle/vundle/
+call vundle#rc()
+
+" original repos on github
+  Bundle 'gmarik/vundle'
+" Bundle 'Lokaltog/vim-easymotion'
+" Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
+  Bundle 'tpope/vim-commentary'
+  Bundle 'tpope/vim-endwise.git'
+  Bundle 'tpope/vim-fugitive'
+  Bundle 'tpope/vim-ragtag.git'
+  Bundle 'tpope/vim-rails.git'
+  Bundle 'tpope/vim-surround.git'
+  Bundle 'tpope/vim-git.git'
+  Bundle 'tpope/vim-unimpaired.git'
+  Bundle 'msanders/snipmate.vim.git'
+  Bundle 'scrooloose/nerdtree.git'
+  Bundle 'cakebaker/scss-syntax.vim.git'
+  Bundle 'ervandew/supertab.git'
+  Bundle 'kchmck/vim-coffee-script.git'
+  Bundle 'itspriddle/vim-jquery.git'
+  Bundle 'airblade/vim-rooter.git'
+
+" vim-scripts repos
+  Bundle 'CSApprox'
+
+" non github repos
+  Bundle 'git://git.wincent.com/command-t.git'
 
 nnoremap <silent> <C-f> :CommandT<CR>
 nnoremap <F5> :CommandTBuffer<CR>
@@ -17,7 +45,7 @@ else
   colorscheme default 
 endif 
 
-silent! call pathogen#runtime_append_all_bundles()
+"silent! call pathogen#runtime_append_all_bundles()
 
 syntax enable                     " Turn on syntax highlighting.
 filetype plugin indent on         " Turn on file type detection.
@@ -55,9 +83,9 @@ set nowritebackup                 " And again.
 set directory=$HOME/.vim/tmp//,.  " Keep swap files in one location
 
 " UNCOMMENT TO USE
-"set tabstop=2                    " Global tab width.
-"set shiftwidth=2                 " And again, related.
-"set expandtab                    " Use spaces instead of tabs
+set tabstop=2                    " Global tab width.
+set shiftwidth=2                 " And again, related.
+set expandtab                    " Use spaces instead of tabs
 
 set laststatus=2                  " Show the status line all the time
 " Useful status information at bottom of screen
