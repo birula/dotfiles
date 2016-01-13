@@ -1,6 +1,11 @@
 alias r='rails'
-alias rgl='rvm gemset list'
-alias rgu='rvm gemset use'
+#alias rgl='rvm gemset list'
+#alias rgu='rvm gemset use'
+alias ack='ack-grep'
+
+alias traf-wn="ssh traf-deploy@173.246.41.44"
+alias traf-02="ssh traf-deploy@192.81.218.83"
+alias traf-03="ssh traf-deploy@198.199.78.224"
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
@@ -15,9 +20,9 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # some more ls aliases
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
+#alias ll='ls -alF'
+#alias la='ls -A'
+#alias l='ls -CF'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
